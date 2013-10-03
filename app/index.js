@@ -52,6 +52,24 @@ DavteamGenerator.prototype.app = function app() {
 
   // create the templated files
   this.tempalte('index.html', 'app/index.html');
+
+  this.copy('404.html', 'app/404.html');
+  this.copy('robots.txt', 'app/robots.txt')
+};
+
+DavteamGenerator.prototype.test = function app() {
+  // create the scaffolding
+  this.mkdir('test');
+  this.mkdir('test/spec');
+
+  // copy the test
+  this.copy('test/index.html', 'test/index.html');
+  this.copy('test/specRunner.js', 'test/specRunner.js');
+  this.copy('test/spec/app.js', 'test/spec/app.js');
+  
+}
+
+DavteamGenerator.prototype.projectfiles = function projectfiles() {
   this.template('Gruntfile.js', 'Gruntfile.js');
   
   this.template('_bower.json', 'bower.json');
@@ -61,21 +79,6 @@ DavteamGenerator.prototype.app = function app() {
 
   // copy the next of the things
   this.copy('_changelog.md', 'changelog.md')
-  this.copy('404.html', 'app/404.html');
-  this.copy('robots.txt', 'app/robots.txt')
-};
-
-DavteamGenerator.prototype.test = function app() {
-  // create the scaffolding
-  this.mkdir('test');
-  this.mkdir('test/spec');
-  this.mkdir('test/lib');
-
-  this.copy('')
-
-}
-
-DavteamGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
   this.copy('gitignore', '.gitignore');
