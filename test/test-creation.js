@@ -21,13 +21,40 @@ describe('davteam generator', function () {
 
   it('creates expected files', function (done) {
     var expected = [
-      // add files you expect to exist here.
+      // Project Files
       '.jshintrc',
-      '.editorconfig'
+      '.editorconfig',
+      '.gitignore',
+      '.npmignore',
+      'changelog.md',
+      'README.md',
+      'package.json',
+      'bower.json',
+      '.bowerrc',
+      'Gruntfile.js',
+
+      // test
+      'test/index.html',
+      'test/specRunner.js',
+      'test/spec/app.js',
+
+      // app files
+      'app/index.html',
+      'app/scripts/app.coffee',
+      'app/scripts/main.coffee',
+      'app/scripts/router.coffee',
+      'app/scripts/modules/index.coffee',
+      'app/404.html',
+      'app/robots.txt',
+
+      'app/styles/main.scss',
+      'app/templates/layouts/index.html'
+
     ];
 
     helpers.mockPrompt(this.app, {
-      'someOption': true
+      'projectName': 'someProject',
+      'projectDescription': 'someDescription'
     });
     this.app.options['skip-install'] = true;
     this.app.run({}, function () {

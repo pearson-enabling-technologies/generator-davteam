@@ -47,12 +47,23 @@ DavteamGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('app/templates');
   this.mkdir('app/scripts');
+  this.mkdir('app/scripts/modules');
   this.mkdir('app/styles');
   this.mkdir('app/img');
 
   // create the templated files
   this.template('index.html', 'app/index.html');
+  this.template('templates/layouts/index.html', 'app/templates/layouts/index.html');
+  // create simple app files
+  this.copy('scripts/app.coffee', 'app/scripts/app.coffee');
+  this.copy('scripts/main.coffee', 'app/scripts/main.coffee');
+  this.copy('scripts/router.coffee', 'app/scripts/router.coffee');
+  this.copy('scripts/modules/index.coffee', 'app/scripts/modules/index.coffee');
 
+  // style files
+  this.copy('styles/main.scss', 'app/styles/main.scss');
+
+  // create the robots, 404 etc
   this.copy('404.html', 'app/404.html');
   this.copy('robots.txt', 'app/robots.txt')
 };
