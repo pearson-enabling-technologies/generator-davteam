@@ -3,8 +3,7 @@ define [
   'backbone'
   'underscore'
   'layoutmanager'
-  'bootstrap'
-  ], ($, Backbone) ->
+  ], ($, Backbone, _) ->
 
   # Provide a global location to place configuration settings and module
   # creation.

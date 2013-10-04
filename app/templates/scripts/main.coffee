@@ -6,11 +6,25 @@ require.config
     jquery                : "../components/jquery/jquery"
     underscore            : "../components/underscore/underscore"
     backbone              : "../components/backbone/backbone"
-    bootstrap             : "../components/sass-bootstrap/"
     bridle                : "../components/bridle/dist/bridle"
     layoutmanager         : "../components/layoutmanager/backbone.layoutmanager"
     d3                    : "../components/d3/d3"
-    
+  
+
+  # shimmy-shimmy yeah
+  shim :
+    backbone:
+      exports: 'Backbone'
+      deps: ['jquery', 'underscore']
+
+    layoutmanager:
+      deps: ['jquery', 'backbone']
+
+    d3:
+      exports: 'd3'
+
+    underscore:
+      exports: '_'
 
 
 # Start the app!

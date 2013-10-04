@@ -3,7 +3,7 @@ define [
   'backbone'
   'underscore'
   'layoutmanager'
-  ], ($, Backbone) ->
+  ], ($, Backbone, _) ->
 
   # The root path to run the application.
     app = root: "/"
