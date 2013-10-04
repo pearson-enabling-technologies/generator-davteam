@@ -1,4 +1,4 @@
-# generator-davteam [![Build Status](https://secure.travis-ci.org/radiodario/generator-davteam.png?branch=master)](https://travis-ci.org/radiodario/generator-davteam)
+# generator-davteam [![Build Status](https://secure.travis-ci.org/pearson-enabling-technologies/generator-davteam.png?branch=master)](https://travis-ci.org/radiodario/generator-davteam)
 
 A generator for The Dav Team at Pearson
 
