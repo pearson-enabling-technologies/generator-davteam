@@ -51,7 +51,7 @@ DavteamGenerator.prototype.app = function app() {
   this.mkdir('app/img');
 
   // create the templated files
-  this.tempalte('index.html', 'app/index.html');
+  this.template('index.html', 'app/index.html');
 
   this.copy('404.html', 'app/404.html');
   this.copy('robots.txt', 'app/robots.txt')
@@ -70,12 +70,12 @@ DavteamGenerator.prototype.test = function app() {
 }
 
 DavteamGenerator.prototype.projectfiles = function projectfiles() {
-  this.template('Gruntfile.js', 'Gruntfile.js');
-  
+  this.copy('Gruntfile.js', 'Gruntfile.js');
+  this.copy('bowerrc', '.bowerrc');
   this.template('_bower.json', 'bower.json');
   this.template('_package.json', 'package.json');
 
-  this.tempalate('_README.md', 'README.md')
+  this.template('_README.md', 'README.md')
 
   // copy the next of the things
   this.copy('_changelog.md', 'changelog.md')
