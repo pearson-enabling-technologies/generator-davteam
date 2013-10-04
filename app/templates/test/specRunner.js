@@ -8,11 +8,29 @@
     baseUrl : 'scripts',
     paths   : {
       spec                  : '../../spec',
-      templates             : '../templates'
+      templates             : '../templates',
       // add your paths here
+      jquery                : "../components/jquery/jquery",
+      underscore            : "../components/underscore/underscore",
+      backbone              : "../components/backbone/backbone",
+      bridle                : "../components/bridle/dist/bridle",
+      layoutmanager         : "../components/layoutmanager/backbone.layoutmanager",
+      d3                    : "../components/d3/d3"
     },
     shim    : {
-      // add your shims here
+      backbone: {
+        exports: 'Backbone',
+        deps: ['jquery', 'underscore']
+      },
+      layoutmanager: {
+        deps: ['jquery', 'backbone']
+      },
+      d3: {
+        exports: 'd3'
+      },
+      underscore: {
+        exports: '_'
+      }
     }
   });
 

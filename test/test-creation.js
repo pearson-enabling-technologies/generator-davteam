@@ -46,7 +46,6 @@ describe('davteam generator', function () {
       'app/scripts/modules/index.coffee',
       'app/404.html',
       'app/robots.txt',
-
       'app/styles/main.scss',
       'app/templates/layouts/index.html'
 
